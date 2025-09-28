@@ -1,0 +1,28 @@
+<!-- Escreva um programa em JavaScript que declare um vetor de intei-
+ros com tamanho 8 e preencha-o com valores fornecidos pelo usuário.
+Em seguida, encontre e exiba a posição (índice) do primeiro elemento
+negativo encontrado no vetor. -->
+
+<script>
+  let vetor = new Array(8);
+  let indiceNegativo = -1;
+
+  for (let i = 0; i < vetor.length; i++) {
+    vetor[i] = Number(prompt(`Digite o  número inteiro para a posição ${i}:`));
+  }
+
+  for (let i = 0; i < vetor.length; i++) {
+    if (vetor[i] < 0) {
+      indiceNegativo = i;
+      break;
+    }
+  }
+
+  if (indiceNegativo !== -1) {
+    console.log(
+      `O primeiro número negativo está na posição: ${indiceNegativo}`
+    );
+  } else {
+    console.log("Não há nenhum número negativo no vetor.");
+  }
+</script>

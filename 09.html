@@ -1,0 +1,19 @@
+<!-- Escreva um programa em JavaScript que declare um vetor de inteiros
+com tamanho 6 e preencha-o com valores fornecidos pelo usuário. Em
+seguida, encontre e exiba a soma dos elementos que estão nas posições
+pares do vetor (índices pares). -->
+
+<script>
+  let vetor = new Array(6);
+  let soma = 0;
+
+  for (let i = 0; i < vetor.length; i++) {
+    vetor[i] = Number(prompt(`Digite um número inteiro ${i}:`));
+  }
+  for (let i = 0; i < vetor.length; i++) {
+    if (i % 2 == 0) {
+      soma += vetor[i];
+    }
+  }
+  console.log(`A soma dos elementos nas posições pares é: ${soma}`);
+</script>

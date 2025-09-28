@@ -1,0 +1,59 @@
+<!-- Escreva um programa em JavaScript que declare um vetor de caracteres
+com tamanho 10 e preencha-o com as letras do alfabeto (em ordem
+alfabética). Em seguida, exiba os elementos do vetor em grupos de 3
+letras por linha. -->
+
+<script>
+  let vetor = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+  ];
+
+  let letras = new Array(10);
+
+  for (let x = 0; x < letras.length; x++) {
+    letras[x] = vetor[x];
+  }
+
+  let grupos = [];
+  let grupo = [];
+
+  for (let x = 0; x < letras.length; x++) {
+    grupo[grupo.length] = letras[x];
+
+    if (grupo.length === 3) {
+      grupos[grupo.length] = grupo;
+      grupo = [];
+    }
+  }
+
+  if (grupo.length > 0) {
+    grupos[grupo.length] = grupo;
+  }
+
+  grupos.forEach((grupo) => console.log(grupo.join(" ")));
+</script>

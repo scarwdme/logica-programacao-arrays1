@@ -1,0 +1,31 @@
+<!-- Faça um programa em JavaScript que preencha um vetor com seis
+elementos numéricos inteiros. Calcule e mostre:
+a) todos os números pares;
+b) a quantidade de números pares;
+c) todos os números ímpares;
+d) a quantidade de números ímpares. -->
+
+<script>
+  let numeros = [];
+
+  for (let i = 0; i < 6; i++) {
+    let valor = Number(prompt(`Digite o ${i + 1}º número inteiro:`));
+    numeros[i] = valor;
+  }
+
+  let pares = [];
+  let impares = [];
+
+  for (let i = 0; i < numeros.length; i++) {
+    if (numeros[i] % 2 === 0) {
+      pares[pares.length] = numeros[i];
+    } else {
+      impares[impares.length] = numeros[i];
+    }
+  }
+
+  console.log("a) Números pares:", pares.join(" "));
+  console.log("b) Quantidade de pares:", pares.length);
+  console.log("c) Números ímpares:", impares.join(" "));
+  console.log("d) Quantidade de ímpares:", impares.length);
+</script>

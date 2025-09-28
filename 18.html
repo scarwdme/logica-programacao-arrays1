@@ -1,0 +1,37 @@
+<!-- Faça um programa em JavaScript que preencha um vetor com sete
+números inteiros, calcule e mostre:
+a) os números múltiplos de 2;
+b) os números múltiplos de 3;
+c) os números múltiplos de 2 e de 3. -->
+
+<script>
+  let vetor = new Array(7);
+
+  for (let i = 0; i < 7; i++) {
+    let numero = Number(
+      prompt("Digite um número inteiro para a posição " + i + ":")
+    );
+
+    if (numero !== numero) {
+      console.log("Valor inválido! Será considerado 0.");
+      numero = 0;
+    }
+
+    vetor[i] = numero;
+  }
+
+  console.log("a) Números múltiplos de 2:");
+  for (let i = 0; i < 7; i++) {
+    if (vetor[i] % 2 == 0) console.log(vetor[i]);
+  }
+
+  console.log("b) Números múltiplos de 3:");
+  for (let i = 0; i < 7; i++) {
+    if (vetor[i] % 3 == 0) console.log(vetor[i]);
+  }
+
+  console.log("c) Números múltiplos de 2 e de 3:");
+  for (let i = 0; i < 7; i++) {
+    if (vetor[i] % 2 == 0 && vetor[i] % 3 == 0) console.log(vetor[i]);
+  }
+</script>

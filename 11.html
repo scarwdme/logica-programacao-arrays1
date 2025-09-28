@@ -1,0 +1,21 @@
+<!-- Escreva um programa em JavaScript que declare um vetor de números
+reais com tamanho 6 e preencha-o com valores fornecidos pelo usuário.
+Em seguida, calcule e exiba a média dos elementos do vetor. -->
+
+<script>
+  let vetor = new Array(6);
+
+  for (let i = 0; i < vetor.length; i++) {
+    vetor[i] = Number(prompt("Digite um número inteiro:"));
+  }
+  for (let i = 0; i < vetor.length; i++) {
+    console.log(`Vetor posição ${i} = ${vetor[i]}`);
+  }
+
+  let soma = 0;
+  for (let i = 0; i < vetor.length; i++) {
+    soma += vetor[i];
+  }
+  let media = soma / vetor.length;
+  console.log(`A média dos números é: ${media}`);
+</script>

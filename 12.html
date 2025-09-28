@@ -1,0 +1,17 @@
+<!-- Escreva um programa em JavaScript que declare um vetor de intei-
+ros com tamanho 6 e preencha-o com os números de 1 a 6 em ordem
+decrescente. Em seguida, exiba apenas os elementos divisíveis por 3. -->
+
+<script>
+  let vetor = new Array(6);
+
+  for (let i = 0; i < vetor.length; i++) {
+    vetor[i] = 6 - i;
+  }
+  console.log("Elementos divisíveis por 3:");
+  for (let i = 0; i < vetor.length; i++) {
+    if (vetor[i] % 3 == 0) {
+      console.log(vetor[i]);
+    }
+  }
+</script>

@@ -1,0 +1,14 @@
+<!-- Escreva um programa em JavaScript que declare um vetor de inteiros
+com tamanho 6 e preencha-o com os números 10, 20, 30, 40, 50 e 60.
+Em seguida, exiba apenas os elementos pares do vetor. -->
+
+<script>
+  let vetor = [10, 20, 30, 40, 50, 60];
+  console.log("Números pares no vetor:");
+
+  for (let i = 0; i < vetor.length; i++) {
+    if (vetor[i] % 2 === 0) {
+      console.log(`Posição ${i}: ${vetor[i]}`);
+    }
+  }
+</script>

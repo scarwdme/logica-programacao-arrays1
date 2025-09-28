@@ -1,0 +1,15 @@
+<!-- Escreva um programa em JavaScript que declare um vetor de inteiros
+com tamanho 5 e preencha-o com valores fornecidos pelo usuário. Em
+seguida, exiba os elementos do vetor em ordem crescente. -->
+
+<script>
+  let numeros = [];
+
+  for (let i = 0; i < 5; i++) {
+    let valor = Number(prompt(`Digite o ${i + 1}º número:`));
+    numeros[i] = valor;
+  }
+  numeros.sort((a, b) => a - b);
+
+  console.log(numeros);
+</script>
